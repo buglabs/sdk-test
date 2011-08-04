@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.buglabs.dragonfly.testautomation
+Bundle-SymbolicName: UITests;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: 
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.swtbot.go,
+ org.eclipse.draw2d
+Import-Package: org.eclipse.draw2d,
+ org.eclipse.swtbot.eclipse.gef.finder.widgets
