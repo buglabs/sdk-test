@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BaseTests
+Bundle-Activator: basetests.Activator
+Bundle-SymbolicName: BaseTests
+Bundle-Version: 1.0.0
+Bundle-Vendor: barberd
+Bundle-Description: Test suite for the BUG base
+Bug-Bundle-Type: Application
+BUG-API-Version: 2.0.2
+Import-Package: org.osgi.framework,
+ com.buglabs.bug.base.pub,
+ org.osgi.util.tracker,
+ com.buglabs.application
