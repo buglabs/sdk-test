@@ -245,7 +245,7 @@ public class TestMain {
 		v.verifyBugSim();
 		
 		im.consoleCommand("headers 1");
-		assertTrue(cc.messageIsPrinted("Bundle-Vendor  Bug Labs, Inc."));
+		assertTrue(cc.messageIsPrinted("Bundle-Vendor: Bug Labs, Inc."));
 	}
 	
 	
@@ -661,7 +661,7 @@ public class TestMain {
 	 * @throws Exception
 	 */
 	@Test
-	public void TCBn3() {
+	public void TCBnP3() {
 		v.verifyDefaultBugNet();
 		prefm.openPreferences();
 		
