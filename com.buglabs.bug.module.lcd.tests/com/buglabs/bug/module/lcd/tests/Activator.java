@@ -3,6 +3,7 @@
  */
 package com.buglabs.bug.module.lcd.tests;
 
+import com.buglabs.application.ServiceTrackerHelper;
 
 import com.buglabs.bug.module.lcd.pub.IML8953Accelerometer;
 import com.buglabs.bug.module.lcd.pub.ILCDModuleControl;
@@ -12,7 +13,7 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.util.tracker.ServiceTracker;
 
-import com.buglabs.application.ServiceTrackerHelper;
+
 
 
 /**
