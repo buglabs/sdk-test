@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: CameraTests
+Bundle-Name: com.buglabs.bug.module.camera.tests
 Bundle-Activator: com.buglabs.bug.module.camera.tests.Activator
-Bundle-SymbolicName: CameraTests
+Bundle-SymbolicName: com.buglabs.bug.module.camera.tests
 Bundle-Version: 1.0.0
 Bundle-Vendor: barberd
 Bundle-Description: Testing the camera module.
@@ -12,7 +12,6 @@ Import-Package: org.osgi.framework,
  com.buglabs.bug.module.camera.pub,
  org.osgi.util.tracker,
  org.osgi.service.log,
- com.buglabs.application,
  com.buglabs.util,
  org.junit,
  org.hamcrest

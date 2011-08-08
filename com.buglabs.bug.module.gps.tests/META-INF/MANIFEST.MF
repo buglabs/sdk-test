@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: GPSTests
+Bundle-Name: com.buglabs.bug.module.gps.tests
 Bundle-Activator: com.buglabs.bug.module.gps.tests.Activator
-Bundle-SymbolicName: GPSTests
+Bundle-SymbolicName: com.buglabs.bug.module.gps.tests
 Bundle-Version: 1.0.0
 Bundle-Vendor: barberd
 Bundle-Description: Exhaustively testing the functionality of the BUGlocate module

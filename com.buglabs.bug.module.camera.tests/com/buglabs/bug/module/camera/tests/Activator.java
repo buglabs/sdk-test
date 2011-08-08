@@ -3,6 +3,8 @@
  */
 package com.buglabs.bug.module.camera.tests;
 
+import com.buglabs.application.ServiceTrackerHelper;
+
 import com.buglabs.bug.module.camera.pub.ICamera2Device;
 import com.buglabs.bug.module.camera.pub.ICamera2ModuleControl;
 import com.buglabs.bug.module.camera.pub.ICameraModuleControl;
@@ -11,7 +13,7 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.util.tracker.ServiceTracker;
 
-import com.buglabs.application.ServiceTrackerHelper;
+
 
 
 /**

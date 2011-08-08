@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: BaseTests
-Bundle-Activator: basetests.Activator
-Bundle-SymbolicName: BaseTests
+Bundle-Name: com.buglabs.bug.module.base.tests
+Bundle-Activator: com.buglabs.bug.module.base.tests.Activator
+Bundle-SymbolicName: com.buglabs.bug.module.base.tests
 Bundle-Version: 1.0.0
 Bundle-Vendor: barberd
 Bundle-Description: Test suite for the BUG base

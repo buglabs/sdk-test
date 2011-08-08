@@ -9,11 +9,11 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import com.buglabs.application.ServiceTrackerHelper.ManagedRunnable;
 import com.buglabs.bug.module.camera.pub.ICamera2Device;
 import com.buglabs.bug.module.camera.pub.ICamera2ModuleControl;
 import com.buglabs.bug.module.camera.pub.ICameraModuleControl;
 
+import com.buglabs.application.ServiceTrackerHelper.ManagedRunnable;
 
 /**
  * Test suite for the Camera module.

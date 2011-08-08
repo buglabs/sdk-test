@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: LCDTests
+Bundle-Name: com.buglabs.module.lcd.tests
 Bundle-Activator: com.buglabs.bug.module.lcd.tests.Activator
-Bundle-SymbolicName: LCDTests
+Bundle-SymbolicName: com.buglabs.bug.module.lcd.tests
 Bundle-Version: 1.0.0
 Bundle-Vendor: barberd
 Bundle-Description: Testing suite for the LCD module.
