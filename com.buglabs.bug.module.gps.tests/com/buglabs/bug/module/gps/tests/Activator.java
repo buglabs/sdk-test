@@ -3,6 +3,7 @@
  */
 package com.buglabs.bug.module.gps.tests;
 
+
 import com.buglabs.bug.module.gps.pub.IPositionProvider;
 import com.buglabs.bug.module.gps.pub.IGPSModuleControl;
 import com.buglabs.bug.module.gps.pub.INMEASentenceProvider;
@@ -37,8 +38,7 @@ public class Activator implements BundleActivator {
 	 * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
 	 */
 	public void start(BundleContext context) throws Exception {
-		serviceTracker = ServiceTrackerHelper.openServiceTracker(context, services, new TestMain()); 
-	
+		serviceTracker = ServiceTrackerHelper.openServiceTracker(context, services, new TestMain());
 	}
 
     /*
