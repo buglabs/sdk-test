@@ -83,7 +83,7 @@ public class TestMain implements ManagedRunnable {
 	 * @throws Exception
 	 */
 	@Test
-	private void testCameraClose(ICamera2Device iCamera2Device) throws Exception {
+	public void testCameraClose(ICamera2Device iCamera2Device) throws Exception {
 		System.out.println(lineBreak);
 		System.out.println("***testCameraClose***");
 		int ioctl = iCamera2Device.cameraClose();
@@ -100,7 +100,7 @@ public class TestMain implements ManagedRunnable {
 	 * @throws Exception
 	 */
 	@Test
-	private void testCameraOpen(ICamera2Device iCamera2Device) throws Exception {
+	public void testCameraOpen(ICamera2Device iCamera2Device) throws Exception {
 		System.out.println("***testCameraOpen***");
 		System.out.println("Method Output: ");
 		int ioctl = iCamera2Device.cameraOpen(ICamera2Device.DEFAULT_MEDIA_NODE, -1, 2048, 1536, 320, 240);
@@ -116,7 +116,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICamera2Device to be called on
 	 * @throws Exception
 	 */
-	private void testCameraOpenDefault(ICamera2Device iCamera2Device) throws Exception {
+	public void testCameraOpenDefault(ICamera2Device iCamera2Device) throws Exception {
 		System.out.println("***testCameraOpenDefault***");
 		System.out.println("Method Output:");
 		int ioctl = iCamera2Device.cameraOpenDefault();
@@ -132,7 +132,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICamera2Device to be called on.
 	 * @throws Exception
 	 */
-	private void testCameraStart(ICamera2Device iCamera2Device) throws Exception {
+	public void testCameraStart(ICamera2Device iCamera2Device) throws Exception {
 		System.out.println("***testCameraStart***");
 		System.out.println("Method Output");
 		int ioctl = iCamera2Device.cameraStart();
@@ -148,7 +148,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICamera2Device to be called on.
 	 * @throws Exception
 	 */
-	private void testCameraStop(ICamera2Device iCamera2Device) throws Exception {
+	public void testCameraStop(ICamera2Device iCamera2Device) throws Exception {
 		System.out.println("***testCameraStop***");
 		System.out.println("Method Output:");
 		int ioctl = iCamera2Device.cameraStop();
@@ -164,7 +164,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICamera2Device to be called on.
 	 * @throws Exception
 	 */
-	private void testGrabFull(ICamera2Device iCamera2Device) {
+	public void testGrabFull(ICamera2Device iCamera2Device) {
 		System.out.println("***testGrabFull");
 		System.out.println("Method Output");
 		iCamera2Device.cameraStart();	
@@ -183,7 +183,7 @@ public class TestMain implements ManagedRunnable {
 	 * @throws Exception
 	 */
 	@Test
-	private void testGrabPreview(ICamera2Device iCamera2Device) throws Exception {
+	public void testGrabPreview(ICamera2Device iCamera2Device) throws Exception {
 		System.out.println("***testGrabPreview***");
 		System.out.println("Method Output");
 		iCamera2Device.cameraStart();
@@ -204,7 +204,7 @@ public class TestMain implements ManagedRunnable {
 	 * @throws Exception
 	 */
 	@Test
-	private void testIsCameraOpen(ICamera2Device iCamera2Device) throws Exception {
+	public void testIsCameraOpen(ICamera2Device iCamera2Device) throws Exception {
 		System.out.println("***testIsCameraOpen***");
 		boolean isOpenResult = iCamera2Device.isCameraOpen();
 		assertNotNull(isOpenResult);
@@ -220,7 +220,7 @@ public class TestMain implements ManagedRunnable {
 	 * @throws Exception
 	 */
 	@Test
-	private void testIsCameraStarted(ICamera2Device iCamera2Device) throws Exception {
+	public void testIsCameraStarted(ICamera2Device iCamera2Device) throws Exception {
 		System.out.println("***testIsCameraStarted***");
 		boolean isStartedResult = iCamera2Device.isCameraStarted();
 		assertNotNull(isStartedResult);
@@ -236,7 +236,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICamera2ModuleControl to be called on
 	 * @throws Exception
 	 */
-	private void testGetColorEffects(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
+	public void testGetColorEffects(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
 		System.out.println("***testGetColorEffects***");
 		int effectsSetting = iCamera2ModuleControl.getColorEffects();
 		assertNotNull(effectsSetting);
@@ -251,7 +251,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICamera2ModuleControl to be called on.
 	 * @throws Exception
 	 */
-	private void testGetExposureLevel(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
+	public void testGetExposureLevel(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
 		System.out.println("***testGetExposureLevel***");
 		int exposureLevel = iCamera2ModuleControl.getExposureLevel();
 		assertNotNull(exposureLevel);
@@ -266,7 +266,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICamear2ModuleControl to be called on.
 	 * @throws Exception
 	 */
-	private void testGetHorizontalMirror(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
+	public void testGetHorizontalMirror(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
 		System.out.println("***testGetHorizontalMirror***");
 		int horizMirror = iCamera2ModuleControl.getHorizontalMirror();
 		assertNotNull(horizMirror);
@@ -281,7 +281,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICamera2ModuleControl to be called on.
 	 * @throws Exception
 	 */
-	private void testGetTestPattern(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
+	public void testGetTestPattern(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
 		System.out.println("***testGetTestPattern***");
 		int testPattern = iCamera2ModuleControl.getTestPattern();
 		assertNotNull(testPattern);
@@ -296,7 +296,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICamera2ModuleControl to be called on.
 	 * @throws Exception
 	 */
-	private void testGetVerticalFlip(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
+	public void testGetVerticalFlip(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
 		System.out.println("***testGetVerticalFlip***");
 		int vertFlip = iCamera2ModuleControl.getVerticalFlip();
 		assertNotNull(vertFlip);
@@ -313,7 +313,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICamera2ModuleControl to be called on.
 	 * @throws Exception
 	 */
-	private void testSetColorEffects(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
+	public void testSetColorEffects(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
 		System.out.println("***testSetColorEffects***");
 		System.out.println("Current Setting: " + iCamera2ModuleControl.getColorEffects());
 		int inputSetting = 1;
@@ -336,7 +336,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICamera2ModuleControl to be called on.
 	 * @throws Exception
 	 */
-	private void testSetExposureLevel(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
+	public void testSetExposureLevel(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
 		System.out.println("***testSetExposureLevel");
 		System.out.println("Current Level: " + iCamera2ModuleControl.getExposureLevel());
 		int inputLevel = 100;
@@ -359,7 +359,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICamera2ModuleControl to be called on.
 	 * @throws Exception
 	 */
-	private void testSetHorizontalMirror(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
+	public void testSetHorizontalMirror(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
 		System.out.println("***testSetHorizontalMirror***");
 		System.out.println("Current Setting: " + iCamera2ModuleControl.getHorizontalMirror());
 		int inputSetting = 1;
@@ -382,7 +382,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICamera2ModuleControl to be called on.
 	 * @throws Exception
 	 */
-	private void testSetTestPattern(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
+	public void testSetTestPattern(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
 		System.out.println("***testSetTestPattern");
 		System.out.println("Current Setting: " + iCamera2ModuleControl.getTestPattern());
 		int inputSetting = 1;
@@ -405,7 +405,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICameara2ModuleControl to be called on.
 	 * @throws Exception
 	 */
-	private void testSetVerticalFlip(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
+	public void testSetVerticalFlip(ICamera2ModuleControl iCamera2ModuleControl) throws Exception {
 		System.out.println("***testSetVerticalFlip***");
 		System.out.println("Current Setting: " + iCamera2ModuleControl.getVerticalFlip());
 		int inputSetting = 1;
@@ -427,7 +427,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICameraModuleControl to be called on
 	 * @throws Exception
 	 */
-	private void testGetSelectedCamera(ICameraModuleControl iCameraModuleControl) throws Exception {
+	public void testGetSelectedCamera(ICameraModuleControl iCameraModuleControl) throws Exception {
 		System.out.println("***testGetSelectedCamera***");
 		int slotId = iCameraModuleControl.getSelectedCamera();
 		assertNotNull(slotId);
@@ -442,7 +442,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICameraModulecontrol to be called on.
 	 * @throws Exception
 	 */
-	private void testSetFlashBeamIntensity(ICameraModuleControl iCameraModuleControl) throws Exception {
+	public void testSetFlashBeamIntensity(ICameraModuleControl iCameraModuleControl) throws Exception {
 		System.out.println("***testSetFlashBeamIntensity***");
 		int inputSetting = 1;
 		System.out.println("Input Setting: " + inputSetting);
@@ -459,7 +459,7 @@ public class TestMain implements ManagedRunnable {
 	 * 		the ICameraModuleControl to be called on.
 	 * @throws Exception
 	 */
-	private void testSetLEDFlash(ICameraModuleControl iCameraModuleControl) throws Exception {
+	public void testSetLEDFlash(ICameraModuleControl iCameraModuleControl) throws Exception {
 		System.out.println("***testSetLEDFlash***");
 		System.out.println("Turning On:");
 		int ioctl1 = iCameraModuleControl.setLEDFlash(true);

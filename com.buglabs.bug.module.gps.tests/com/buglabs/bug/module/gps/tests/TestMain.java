@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 
-import com.buglabs.application.ServiceTrackerHelper.ManagedRunnable;
+
 import com.buglabs.bug.module.gps.pub.IGPSModuleControl;
 import com.buglabs.bug.module.gps.pub.INMEARawFeed;
 import com.buglabs.bug.module.gps.pub.INMEASentenceProvider;
@@ -20,6 +20,8 @@ import com.buglabs.nmea2.RMC;
 import org.junit.Test;
 import org.osgi.util.position.Position;
 
+
+import com.buglabs.application.ServiceTrackerHelper.ManagedRunnable;
 /**
  * Test suite for the GPS module.
  * @author barberdt

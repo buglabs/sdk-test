@@ -12,6 +12,7 @@ Import-Package: org.osgi.framework,
  com.buglabs.bug.module.camera.pub,
  org.osgi.util.tracker,
  org.osgi.service.log,
+ com.buglabs.application,
  com.buglabs.util,
  org.junit,
  org.hamcrest
