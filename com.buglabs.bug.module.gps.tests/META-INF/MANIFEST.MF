@@ -20,6 +20,7 @@ Import-Package: org.osgi.framework,
  com.buglabs.module,
  org.osgi.util.measurement,
  org.junit,
- org.hamcrest
+ org.hamcrest,
+ junit.framework
  
  

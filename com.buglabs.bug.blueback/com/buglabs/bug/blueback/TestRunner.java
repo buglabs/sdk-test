@@ -37,31 +37,35 @@ class TestRunner {
 	 * @throws Exception
 	 */
 	public void execute() throws Exception {
+		System.out.println("*** BEGINNING BLUEBACK AUTOMATED TEST SUITE ***");
+		System.out.println("-----------------------------------------------");
+		System.out.println("");
+		System.out.println("");
 		Thread tt = new TestThread();
 		tt.start();
-		
 	}
 	
 	/**
 	 * Thread responsible for running the tests and printing the results to the felix.log file.
-	 * 
-	 * @author kgilmer, jconnolly, barberdt 
-	 *
 	 */
 	private class TestThread extends Thread {
 		
 		public void run() {
 			if (activator.testSuites.size() == 0) {
+				System.out.println("No tests to run!");
 				return;
 			}
 			
 			activator.testComplete = 0;
-			activator.log.log(LogService.LOG_INFO, "Executing " + activator.testSuites.size() + " Tests");
+			System.out.println("Executing " + activator.testSuites.size() + " Test(s):");
+			System.out.println("");
+			System.out.println("");
 			for (Iterator<TestCase> i = activator.testSuites.iterator(); i.hasNext();) {
 				TestSuite tsu = new TestSuite();
 				TestCase ts = i.next();
 				activator.testComplete++;
-				activator.log.log(LogService.LOG_INFO, "Executing Test Case: " + ts.getClass().getName());
+				System.out.println("|EXECUTING TEST CASE: " + ts.getClass().getName() + "|");
+				System.out.println("");
 
 				tsu.addTestSuite(ts.getClass());
 				TestResult tr = new TestResult();
@@ -79,32 +83,38 @@ class TestRunner {
 					}
 
 					public void startTest(Test test) {
-						activator.log.log(LogService.LOG_INFO, "Running test " + test.toString());
-					}
+						System.out.println("Running Test: " + test.toString());
+						System.out.println("----------------------------------------------------------------------------------------------------");
+					}										    
 					
 				});
 				tsu.run(tr);
 
 				if (tr.wasSuccessful()) {
-					activator.log.log(LogService.LOG_INFO, "Test Passed.");
+					System.out.println("TEST RESULTS: Test passed!");
+					System.out.println("");
+					System.out.println("");
 					activator.testComplete = 0;
 					
 				} else {
 					activator.testComplete = 0;
-					activator.log.log(LogService.LOG_INFO,"Failed");
-					activator.log.log(LogService.LOG_INFO, "Test Failed.  Failure count: " + tr.failureCount() + " Error count: " + tr.errorCount());
+					System.out.println("TEST RESULTS: Test did not pass :(  Failures: " + tr.failureCount() + "; Errors: " + tr.errorCount());
 
-					activator.log.log(LogService.LOG_INFO, "Errors: ");
+					System.out.println("Errors: ");
 					for (Enumeration e = tr.errors(); e.hasMoreElements();) {
 						Object o = e.nextElement();
-						activator.log.log(LogService.LOG_INFO, o.toString());
+						System.out.println("" + o.toString());
 					}
-
-					activator.log.log(LogService.LOG_INFO, "Failures: ");
+					
+					System.out.println("");
+					
+					System.out.println("Failures: ");
 					for (Enumeration e = tr.failures(); e.hasMoreElements();) {
 						TestFailure t = (TestFailure) e.nextElement();
-						activator.log.log(LogService.LOG_INFO, t.exceptionMessage());
+						System.out.println("" + t.exceptionMessage());
 					}
+					System.out.println("");
+					System.out.println("");
 				}
 			}
 		}

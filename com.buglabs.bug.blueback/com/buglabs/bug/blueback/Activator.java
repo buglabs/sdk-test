@@ -38,6 +38,7 @@ public class Activator implements BundleActivator, ServiceTrackerCustomizer, Ser
 	 * @throws Exception
 	 */
 	public void start(BundleContext context) throws Exception {
+		Thread.sleep(5000); //Allow felix to finish doing it's thing.
 		testSuites = new ArrayList();
 		Activator.context = context;
 		log = LogServiceUtil.getLogService(context);
@@ -108,7 +109,9 @@ public class Activator implements BundleActivator, ServiceTrackerCustomizer, Ser
 	 */
 	public void serviceChanged(ServiceEvent event) {
 		Object o = context.getService(event.getServiceReference());
-		System.out.println("New Service Event: " + o.getClass().getName());
+		System.out.println("\n");
+		System.out.println("Recognized New Service Event: " + o.getClass().getName());
+		System.out.println("");
 		if (o instanceof TestCase) {
 			switch (event.getType()) {
 			case ServiceEvent.REGISTERED:
