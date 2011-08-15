@@ -15,4 +15,5 @@ Import-Package: org.osgi.framework,
  com.buglabs.application,
  com.buglabs.util,
  org.junit,
- org.hamcrest
+ org.hamcrest,
+ junit.framework

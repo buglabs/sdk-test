@@ -14,6 +14,9 @@ Import-Package: org.osgi.framework,
  org.osgi.service.log,
  com.buglabs.application,
  com.buglabs.util,
- com.buglabs.bug.accelerometer.pub
+ com.buglabs.bug.accelerometer.pub,
+ org.junit,
+ org.hamcrest,
+ junit.framework
  
  

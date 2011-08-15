@@ -54,7 +54,7 @@ public class TestIGPSModuleControl extends TestCase {
 	 */
 	public void testSetPassiveAntenna() throws Exception{
 		int ioctl = igmc.setPassiveAntenna();
-		assertEquals(ioctl, 0);
+		assertEquals(0, ioctl);
 		System.out.println("IOCTL Return: " + ioctl);
 		System.out.println("\n\n");
 	}
@@ -65,7 +65,7 @@ public class TestIGPSModuleControl extends TestCase {
 	 */
 	public void testSetActiveAntenna() throws Exception {
 		int ioctl = igmc.setActiveAntenna();
-		assertEquals(ioctl, 0);
+		assertEquals(0, ioctl);
 		System.out.println("IOCTL Return: " + ioctl);
 		System.out.println("\n\n");
 	}
@@ -130,10 +130,10 @@ public class TestIGPSModuleControl extends TestCase {
 	 */
 	public void testSetLEDGreen() throws Exception {
 		int ioctl1 = igmc.setLEDGreen(true);
-		assertEquals(ioctl1, 0);
+		assertEquals(0, ioctl1);
 		System.out.println("LED On IOCTL Return: " + ioctl1);
 		int ioctl2 = igmc.setLEDGreen(false);
-		assertEquals(ioctl2, 0);
+		assertEquals(0, ioctl2);
 		System.out.println("LED Off IOCTL Return: " + ioctl2);
 		System.out.println("\n\n");
 	}
@@ -144,10 +144,10 @@ public class TestIGPSModuleControl extends TestCase {
 	 */
 	public void testSetLEDRed() throws Exception {
 		int ioctl1 = igmc.setLEDRed(true);
-		assertEquals(ioctl1, 0);
+		assertEquals(0, ioctl1);
 		System.out.println("LED On IOCTL Return: " + ioctl1);
 		int ioctl2 = igmc.setLEDRed(false);
-		assertEquals(ioctl2, 0);
+		assertEquals(0, ioctl2);
 		System.out.println("LED Off IOCTL Return: " + ioctl2);
 		System.out.println("\n\n");
 	}

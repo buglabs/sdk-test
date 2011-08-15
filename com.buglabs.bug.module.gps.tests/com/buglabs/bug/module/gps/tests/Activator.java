@@ -8,12 +8,10 @@ import com.buglabs.bug.module.gps.pub.IPositionProvider;
 import com.buglabs.bug.module.gps.pub.IGPSModuleControl;
 import com.buglabs.bug.module.gps.pub.INMEASentenceProvider;
 import com.buglabs.bug.module.gps.pub.INMEARawFeed;
-import com.buglabs.util.LogServiceUtil;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
-import org.osgi.service.log.LogService;
 import org.osgi.util.tracker.ServiceTracker;
 
 import com.buglabs.application.ServiceTrackerHelper;
@@ -37,7 +35,6 @@ public class Activator implements BundleActivator {
 	};	
 	
 	private ServiceTracker serviceTracker;
-	private static LogService log;
 	private static BundleContext context;
 	
 	/*
@@ -45,9 +42,8 @@ public class Activator implements BundleActivator {
 	 * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
 	 */
 		public void start(final BundleContext context) throws Exception {
-		this.context = context;
-		log = LogServiceUtil.getLogService(context);
-		serviceTracker = ServiceTrackerHelper.openServiceTracker(context, services, new ServiceTrackerHelper.ManagedInlineRunnable() {
+			this.context = context;
+			serviceTracker = ServiceTrackerHelper.openServiceTracker(context, services, new ServiceTrackerHelper.ManagedInlineRunnable() {
                        
                         private ServiceRegistration reg;
                         private ServiceRegistration reg1;
@@ -88,7 +84,4 @@ public class Activator implements BundleActivator {
 		return context;
 	}
 	
-	public static LogService getLogService() {
-		return log;
-	}
 }
