@@ -9,9 +9,7 @@ import junit.framework.TestCase;
 import junit.framework.TestFailure;
 import junit.framework.TestListener;
 import junit.framework.TestResult;
-import junit.framework.TestSuite;
-
-import org.osgi.service.log.LogService;
+import junit.framework.TestSuite;		
 
 /**
  * The class responsible for running the JUnit tests on the registered TestCase services. 

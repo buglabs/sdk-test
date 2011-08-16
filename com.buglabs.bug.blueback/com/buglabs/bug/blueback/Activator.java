@@ -14,7 +14,7 @@ import org.osgi.framework.ServiceListener;
 import org.osgi.framework.ServiceReference;
 import org.osgi.service.log.LogService;
 import org.osgi.util.tracker.ServiceTrackerCustomizer;
-import com.buglabs.util.LogServiceUtil;
+import com.buglabs.util.osgi.LogServiceUtil;;
 
 /**
  * An on-BUG testing application that listens for registered TestCase services and runs a JUnit-based
