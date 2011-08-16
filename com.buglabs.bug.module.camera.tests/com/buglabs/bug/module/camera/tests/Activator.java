@@ -13,7 +13,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.util.tracker.ServiceTracker;
 
-import com.buglabs.application.ServiceTrackerHelper;
+import com.buglabs.util.ogsgi.ServiceTrackerUtil;
 
 /**
  * Activator to the camera module's on-BUG automated test suite.
