@@ -1,15 +1,19 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Camera3Oh
-Bundle-Activator: camera3oh.Activator
-Bundle-SymbolicName: Camera3Oh
+Bundle-Name: com.buglabs.bug.module.camera.tests
+Bundle-Activator: com.buglabs.bug.module.camera.tests.Activator
+Bundle-SymbolicName: com.buglabs.bug.module.camera.tests
 Bundle-Version: 1.0.0
-Bundle-Vendor: barberdt
-Bundle-Description: On-BUG testing suite for the camera module in Dragonfly 3.0
+Bundle-Vendor: barberd
+Bundle-Description: Testing the camera module.
 Bug-Bundle-Type: Application
-BUG-API-Version: 2.5.0
+BUG-API-Version: 2.0.2
 Import-Package: org.osgi.framework,
+ com.buglabs.bug.module.camera.pub,
+ org.osgi.util.tracker,
+ org.osgi.service.log,
+ com.buglabs.util.osgi,
+ com.buglabs.util,
  org.junit,
  org.hamcrest,
  junit.framework
-
