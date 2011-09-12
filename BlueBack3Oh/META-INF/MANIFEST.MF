@@ -6,9 +6,10 @@ Bundle-Version: 2.0.0
 BUG-API-Version: 2.0.2
 Bundle-Name: BlueBack
 Bundle-Activator: com.buglabs.bug.blueback.Activator
-Import-Package: com.buglabs.bug.base.pub,
+Import-Package: com.buglabs.bug.base.bug20.pub,
  com.buglabs.util,
  org.osgi.service.log,
- org.osgi.util.tracker,org.osgi.framework
+ org.osgi.util.tracker,org.osgi.framework,
+ com.buglabs.util.osgi
 Bundle-SymbolicName: com.buglabs.bug.blueback
 

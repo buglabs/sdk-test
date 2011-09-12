@@ -39,6 +39,7 @@ public class Activator implements BundleActivator {
 	 * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
 	 */
 	public void start(final BundleContext context) throws Exception {
+		System.out.println("TEST PRINT: Entered start");
 		this.context = context;
 		serviceTracker = ServiceTrackerUtil.openServiceTracker(context, new ServiceTrackerUtil.ManagedInlineRunnable() {
                        
@@ -60,6 +61,7 @@ public class Activator implements BundleActivator {
 					reg2.unregister();
 				}
 		}, services);
+		System.out.println("TEST PRINT: End of start");
 	}
 
 	/*

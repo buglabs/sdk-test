@@ -55,6 +55,7 @@ public class TestILCDModuleControl extends TestCase {
 		System.out.println("Setting backlight to " + backlight);
 		int ioctl1 = ilcdmc.setBackLight(backlight);
 		assertEquals(0, ioctl1);
+		Thread.sleep();
 		System.out.println("IOCTL Return: " + ioctl1);
 		backlight = 100;
 		System.out.println("Setting backlight to " + backlight);
